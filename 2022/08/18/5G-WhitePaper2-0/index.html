@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前言 2021年4月，3GPP正式确定5G-Advanced为5G演进标准名称，Rel-18是5G-A首个重要版本，而5G-A被认为是向6G演进的中间阶段。 2022年3月1日，在MWC22巴塞罗那期间华为、中国移动、SKT、du等20多家产业伙伴联合发布了《5G -Advanced 网络技术演进白皮书2.0》。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《5G-Advanced网络技术演进白皮书2.0》发布会">
+<meta property="og:url" content="http://example.com/2022/08/18/5G-WhitePaper2-0/index.html">
+<meta property="og:site_name" content="大筝的个人博客">
+<meta property="og:description" content="前言 2021年4月，3GPP正式确定5G-Advanced为5G演进标准名称，Rel-18是5G-A首个重要版本，而5G-A被认为是向6G演进的中间阶段。 2022年3月1日，在MWC22巴塞罗那期间华为、中国移动、SKT、du等20多家产业伙伴联合发布了《5G -Advanced 网络技术演进白皮书2.0》。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/08/18/5G-WhitePaper2-0/R18_New_tech.png">
+<meta property="og:image" content="http://example.com/2022/08/18/5G-WhitePaper2-0/R19_New_tech.png">
+<meta property="og:image" content="http://example.com/2022/08/18/5G-WhitePaper2-0/GSMAi_scaling_5G.png">
+<meta property="og:image" content="http://example.com/2022/08/18/5G-WhitePaper2-0/GSMAi_future_5G.png">
+<meta property="og:image" content="http://example.com/2022/08/18/5G-WhitePaper2-0/GSMAi_innovations.png">
+<meta property="article:published_time" content="2022-08-18T10:45:34.000Z">
+<meta property="article:modified_time" content="2022-08-20T12:07:17.688Z">
+<meta property="article:author" content="Yuanzhengzheng">
+<meta property="article:tag" content="MWC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/08/18/5G-WhitePaper2-0/R18_New_tech.png">
+
+<link rel="canonical" href="http://example.com/2022/08/18/5G-WhitePaper2-0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>《5G-Advanced网络技术演进白皮书2.0》发布会 | 大筝的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">大筝的个人博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/18/5G-WhitePaper2-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yuanzhengzheng">
+      <meta itemprop="description" content="You deserve it">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大筝的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《5G-Advanced网络技术演进白皮书2.0》发布会
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-08-18 18:45:34" itemprop="dateCreated datePublished" datetime="2022-08-18T18:45:34+08:00">2022-08-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-08-20 20:07:17" itemprop="dateModified" datetime="2022-08-20T20:07:17+08:00">2022-08-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A1%8C%E4%B8%9A%E7%8E%B0%E7%8A%B6/" itemprop="url" rel="index"><span itemprop="name">行业现状</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li>2021年4月，3GPP正式确定5G-Advanced为5G演进标准名称，Rel-18是5G-A首个重要版本，而<strong>5G-A被认为是向6G演进的中间阶段</strong>。</li>
+<li>2022年3月1日，在MWC22巴塞罗那期间华为、中国移动、SKT、du等20多家产业伙伴联合发布了《5G -Advanced 网络技术演进白皮书2.0》。<span id="more"></span></li>
+</ul>
+<hr>
+<h1 id="中国移动研究院基础网络技术研究所副所长-陆璐"><a href="#中国移动研究院基础网络技术研究所副所长-陆璐" class="headerlink" title="中国移动研究院基础网络技术研究所副所长 陆璐"></a>中国移动研究院基础网络技术研究所副所长 陆璐</h1><p>白皮书2.0面向R18的三项新技术</p>
+<ol>
+<li><strong>XR and media service enhancement XR和多媒体增强</strong><br> XR（Extended Reality，扩展现实）指通过计算机将真实与虚拟相结合，打造一个可人机交互的虚拟环境，这也是AR、VR、MR等多种技术的统称。通过将三者的视觉交互技术相融合，为体验者带来虚拟世界与现实世界之间无缝转换的“沉浸感”。  </li>
+<li><strong>AI&#x2F;ML</strong> <strong>人工智能和机器学习</strong><br>支持对5G系统中与UE相关的网络资源利用的监测，以支持应用层Al&#x2F;ML模型的分布和转移，为各种应用提供培训；支持应用层的分布式&#x2F;联盟式学习，这在很多方面都有帮助，如计算能力共享、隐私安全和无线资源的有效利用。</li>
+<li><strong>Proximity-based service 邻近通信</strong><br>利用PC5-NR通信技术，实现UE之间的直接通信或远程UE通过中继UE接入5G网络。有助于加强5G-Advanced网络对远程UE接入方式的控制，提高UE接入网络的可靠性和数据速率。</li>
+</ol>
+<p><img src="/2022/08/18/5G-WhitePaper2-0/R18_New_tech.png" alt="图1 面向R18的三项新技术"></p>
+<center>图1 面向R18的三项新技术</center>
+
+
+<p> 面向R19及以后版本的三项技术</p>
+<ol>
+<li><strong>Mobile computing power awareness network 移动算力网络</strong><br>5G网络将根据计算能力和资源意识提供灵活的业务调度，实现多站点之间的计算能力互助。支持对所有业务实施统一的资源协调、智能调度、精确配置和动态优化。</li>
+<li><strong>Passive IoT 无源物联网</strong><br>利用反向散射和能量收集，实现目标节点的高效信息传输，只需少量电池，复杂度极低。促进无源通信设备与蜂窝通信设备的结合，实现快速联网，提高网络覆盖率。</li>
+<li><strong>Positioning、Ranging and Perception Enhancement通信感知一体化</strong><br>低成本、高精度的物体位置、角度、距离和速度感应。增强核心网络的独立感知和分析能力，实现多维度、多粒度的环境感知和目标感知</li>
+</ol>
+<p><img src="/2022/08/18/5G-WhitePaper2-0/R19_New_tech.png" alt="图2 面向R19的三项新技术"></p>
+<center>图2 面向R19的三项新技术</center>
+
+<hr>
+<h1 id="GSMA-Intelligence-首席分析师Peter-Jarich"><a href="#GSMA-Intelligence-首席分析师Peter-Jarich" class="headerlink" title="GSMA Intelligence 首席分析师Peter Jarich"></a>GSMA Intelligence 首席分析师Peter Jarich</h1><p>GSMAi把5G-A将要带来的新能力分为两部分。一是扩展当前5G，即对5G的三种应用场景进一步的增强。</p>
+<ol>
+<li><strong>Better eMBB</strong><br>  Peter指出，5G-A改进eMBB体现在提升更大的容量、支持更多的地方，支持高清视频通信，扩大宽带服务规模以及对FWA的发展。</li>
+</ol>
+<blockquote>
+<p> eMBB( Enhanced Mobile Broadband，<strong>增强移动宽带</strong>)，是指在现有移动宽带业务场景的基础上，对于用户体验等性能的进一步提升。美国时间2016年11月17日凌晨0点45分，在3GPP RAN187次会议的5G短码方案讨论中，中国华为公司主推的Polar Code（极化码）方案，成为5G控制信道eMBB场景编码最终方案。<br>  最初，正在升级的4G LTE服务，以及新的5G服务集成都在重要的大都市地区。增强型移动宽带（eMBB）的<strong>首次实现源自3GPP版本15，即非独立（NSA）5G新无线电（NR）</strong>。这些标准的目标是通过提高吞吐量和减少延迟目标来增强4G LTE。在3 GHz频谱中还添加了其他蜂窝频段，以及新的NSA毫米波频率。<br>  早期的5G手机依赖6 GHz以下的技术，而未来几年将推出毫米波（高频段）手机。目前，<strong>FWA（Fixed Wireless Access，固定无线接入）</strong> 是正在部署和开发的主要高频段应用。在大型公共场所，如大型体育馆和会议中心，也有数个5G原型装置，这可能会继续作为早期5G装置的主要投资领域。</p>
+</blockquote>
+<ol start="2">
+<li><strong>Better mMTC or IoT</strong><br>  增大覆盖面积和移动性，降低物联网成本和能量消耗（Passive，无源终端）</li>
+</ol>
+<blockquote>
+<p>  mMTC（massive Machine Type of Communication，海量机器类通信 或 大规模物联网），mMTC主要是人与物之间的信息交互，它将在6GHz以下的频段发展，同时应用在大规模物联网上，较可见的发展是NB-IoT。以往普遍的Wi-Fi、Zigbee、蓝牙等，较属于家庭用的小范围技术，回传线路(Backhaul)主要都是靠LTE，近期随着大范围覆盖的NB-IoT、LoRa等技术标准的出炉，可望让物联网的发展更为广泛。</p>
+</blockquote>
+<ol start="3">
+<li><strong>Better URLLC</strong><br>  主要是切片方面的改进，时延是关键，体现在金融业和制造业，他们对时延和可靠性有着更高的要求。<blockquote>
+<p>URLLC (Ultra Reliable Low Latency Communication，超可靠低时延通信)，主要体现物与物之间的通信需求。</p>
+</blockquote>
+</li>
+</ol>
+<p> <img src="/2022/08/18/5G-WhitePaper2-0/GSMAi_scaling_5G.png" alt="图3 扩展现有 5G"></p>
+<center>图3 扩展现有 5G</center>
+
+
+
+<p>  二是面向明天，转向新服务和新用例，对于未来5G我们应该关注方向。  </p>
+<ol>
+<li><p><strong>Extend Reality &amp; Broadban Communication 增强现实和宽带通信</strong></p>
+<ul>
+<li>high-def，real time video comms（高清实时视频通信），如Zoom、Teams等应用</li>
+<li>AR，VR，XR - the METAVERSE（元宇宙）</li>
+</ul>
+</li>
+<li><p><strong>Precision Positioning &amp; Sensing 精确定位和传感</strong>   </p>
+<ul>
+<li>industrial UAV and vehicles（工业无人机和车辆）</li>
+<li>人员定位与追踪</li>
+<li>米级提升到厘米级精度</li>
+</ul>
+</li>
+<li><p><strong>Enhanced Uplink 增强的上行链路</strong></p>
+</li>
+</ol>
+<p> <img src="/2022/08/18/5G-WhitePaper2-0/GSMAi_future_5G.png" alt="图4 发展未来5G"></p>
+<center>图4 发展未来5G</center>
+
+<p>我们应该从哪些方面来实现？<br>Perter将其分为RAN（Radio Access Network，接入网）、CN（Core Network，核心网）和底层的能源三方面讨论。</p>
+<ul>
+<li>RAN侧<ul>
+<li>Duplexing innovations 双工方式创新</li>
+<li>Enhanced MIMO&#x2F;Beamforming 增强MIMO和波束成形</li>
+<li>AI integration（AI-native）嵌入AI</li>
+<li>RedCap（Reduced Capability，降低能力） IoT 低成本物联网</li>
+<li>Satellite&amp;Drone comms 卫星通信、无人机通信与RAN的结合</li>
+<li>Relays and Sidelink 中继和物物通信</li>
+</ul>
+</li>
+<li>CN侧<ul>
+<li>Distribution（edge-native）分布式部署，将计算推向网络边缘，尤其是类似VR&#x2F;AR等低时延用例和实时宽带通信</li>
+<li>QoE（Quality of Experience，用户体验） &amp; Slicing（切片）</li>
+<li>AI integration（AI-native）AI融合</li>
+<li>Convergence（融合）： terrestrial&amp;aerial（地面网络与卫星网络）、mobile&amp;WiFi、fixed&amp;mobile、multi-vertical</li>
+</ul>
+</li>
+<li>Sustainability &amp; Energy Efficiency 可持续性和能源效率</li>
+</ul>
+<p><img src="/2022/08/18/5G-WhitePaper2-0/GSMAi_innovations.png" alt="图5 5G-A 创新点"></p>
+<center>图5 5G-A 创新点</center>
+
+
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://live.huawei.com/mwc/meeting/cn/10205.html">《5G-Advanced 网络技术演进白皮书2.0》发布会视频地址</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MWC/" rel="tag"># MWC</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/08/20/dinghui/" rel="next" title="通信顶会和期刊">
+      通信顶会和期刊 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E7%A0%94%E7%A9%B6%E9%99%A2%E5%9F%BA%E7%A1%80%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E6%89%80%E5%89%AF%E6%89%80%E9%95%BF-%E9%99%86%E7%92%90"><span class="nav-number">2.</span> <span class="nav-text">中国移动研究院基础网络技术研究所副所长 陆璐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GSMA-Intelligence-%E9%A6%96%E5%B8%AD%E5%88%86%E6%9E%90%E5%B8%88Peter-Jarich"><span class="nav-number">3.</span> <span class="nav-text">GSMA Intelligence 首席分析师Peter Jarich</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yuanzhengzheng"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Yuanzhengzheng</p>
+  <div class="site-description" itemprop="description">You deserve it</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; Aug. 2022 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yuanzhengzheng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
